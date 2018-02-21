@@ -101,7 +101,7 @@ def main():
     ov_client = init_client(username=module.params['username'],
                             password=module.params['password'],
                             endpoint=module.params['endpoint'],
-                            verify=module.params['verify_ssl'])
+                            verify=module.boolean(module.params['verify_ssl']))
 
     status = {
         'changed': True,

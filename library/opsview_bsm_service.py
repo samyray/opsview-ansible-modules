@@ -349,7 +349,7 @@ def main():
                             password=module.params['password'],
                             endpoint=module.params['endpoint'],
                             token=module.params['token'],
-                            verify=module.params['verify_ssl'])
+                            verify=module.boolean(module.params['verify_ssl']))
 
     manager = get_config_manager(ov_client, MANAGER_OBJ_TYPE)
 
